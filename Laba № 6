@@ -12,4 +12,17 @@ INSERT INTO worker (worker_id, shop_id, name, salary, position) VALUES
     (1, 101, 'Иван Иванов', 50000, 'Менеджер'),
     (2, 102, 'Мария Петрова', 60000, 'Продавец'),
     (3, 101, 'Александр Сидоров', 55000, 'Кассир'),
-    (4, 103, 'Екатерина Иванова', 48000, 'Продавец');
+    (4, 103, 'Екатерина Иванова', 48000, 'Продавец')
+
+Запросы 
+SELECT shop_id, COUNT(*) AS num_workers
+FROM worker
+GROUP BY shop_id;
+
+SELECT * FROM worker
+ORDER BY salary DESC;
+
+SELECT MAX(salary) AS max_salary
+FROM worker;
+
+
